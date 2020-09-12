@@ -1,0 +1,68 @@
+.portfolio-section {
+	@media screen and (min-width: 1200px) {
+		padding-bottom: 94px;
+	}
+}
+
+.filters {
+	display: flex;
+
+	margin-bottom: 40px;
+
+	@media screen and (max-width: 767px) {
+		flex-wrap: wrap;
+	}
+
+	@media screen and (min-width: 768px) {
+		justify-content: center;
+
+		margin-bottom: 30px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
+
+	.item {
+		margin-bottom: 15px;
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 0;
+		}
+	}
+
+	.item:not(:last-child) {
+		margin-right: 8px;
+	}
+
+	.item:nth-last-child(-n + 2) {
+		margin-bottom: 0;
+	}
+
+	.button {
+		padding: 6px 22px;
+
+		border-radius: 4px;
+		border: 1px solid transparent;
+
+		color: $primary-text-color;
+		background-color: $secondary-bcg-color;
+
+		font-family: inherit;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.62;
+		text-align: center;
+		letter-spacing: inherit;
+
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+			box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover,
+		&:focus {
+			color: $white-text-color;
+			background-color: $button-bcg-color;
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+		}
+	}
+}

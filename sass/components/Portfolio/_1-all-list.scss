@@ -1,0 +1,137 @@
+.all-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (min-width: 768px) {
+		margin: -15px;
+	}
+
+	.link {
+		text-decoration: none;
+	}
+
+	.item {
+		width: 450px;
+		max-width: 100%;
+
+		margin-bottom: 30px;
+
+		transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		@media screen and (min-width: 768px) {
+			width: 354px;
+
+			margin: 15px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			width: 370px;
+		}
+
+		&:hover,
+		&:focus {
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+		}
+	}
+
+	.img-box {
+		position: relative;
+
+		width: 100%;
+
+		overflow: hidden;
+	}
+}
+
+.card-tittle-container {
+	padding: 20px 24px;
+
+	border: 1px solid #eeeeee;
+	border-top: none;
+
+	.tittle {
+		margin-top: 0;
+		margin-bottom: 4px;
+
+		color: $primary-text-color;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 2;
+		letter-spacing: 0.06em;
+
+		@media screen and (max-width: 379px) {
+			font-size: 16px;
+			line-height: 1.7;
+		}
+	}
+
+	.type-resource {
+		margin: 0;
+
+		color: $secondary-text-color;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.88;
+
+		@media screen and (max-width: 379px) {
+			font-size: 14px;
+			line-height: 1.5;
+		}
+	}
+}
+
+.box-text-hover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform: translateY(100%);
+
+	color: $white-text-color;
+	background-color: rgba(33, 150, 243, 0.9);
+
+	opacity: 0;
+
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	.all-list .item:hover & {
+		transform: translateY(0%);
+
+		opacity: 1;
+	}
+
+	.text {
+		width: 90%;
+
+		margin: 0;
+
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 1.56;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@media screen and (max-width: 379px) {
+			font-size: 16px;
+			line-height: 1.4;
+		}
+		@media screen and (min-width: 480px) {
+			width: 402px;
+		}
+
+		@media screen and (min-width: 768px) {
+			width: 306px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			width: 322px;
+		}
+	}
+}

@@ -1,0 +1,97 @@
+.principles-bg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-bottom: 30px;
+
+	width: 100%;
+	height: 120px;
+
+	background-color: $secondary-bcg-color;
+
+	@media screen and (min-width: 768px) {
+		padding: 25px 142px;
+
+		width: 354px;
+
+		background-color: $secondary-bcg-color;
+	}
+
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 25px 100px;
+
+		width: 270px;
+
+		background-color: $secondary-bcg-color;
+	}
+}
+
+.principles-icon {
+	width: 70px;
+	height: 70px;
+}
+
+.principles-list {
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin: -15px;
+	}
+
+	.item {
+		width: 100%;
+
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 30px;
+		}
+
+		@media screen and (min-width: 768px) {
+			width: 354px;
+
+			margin: 15px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			width: 270px;
+		}
+	}
+
+	.tittle {
+		margin-top: 0;
+		margin-bottom: 10px;
+
+		color: $primary-text-color;
+
+		text-align: center;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		text-transform: uppercase;
+
+		@media screen and (min-width: 768px) {
+			text-align: start;
+		}
+	}
+
+	.text {
+		margin-top: 0;
+		margin-bottom: 0;
+
+		color: $secondary-text-color;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.71;
+	}
+}
